@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './../App.css'
+
 
 interface ImageTransitionProps {
     images: string[];
@@ -27,7 +27,7 @@ const ImageTransition: React.FC<ImageTransitionProps> = ({ images }) => {
     }, [images.length]);
 
     return (
-        <div className="image-container">
+        <div className="container-img">
             <div className={`image ${transitioning ? 'zooming' : ''}`} style={{ transform: `scale(${scale})` }}>
                 <img src={images[currentIndex]} alt="Slideshow" />
             </div>
